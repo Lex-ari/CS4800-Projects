@@ -41,8 +41,11 @@ public class Employee {
 }
 
 class SalariedEmployee extends Employee {
-
     private double weekly_salary;
+
+    public SalariedEmployee(String firstName, String lastName, String ssid){
+        super(firstName, lastName, ssid);
+    }
 
     public double getWeeklySalary() {
         return weekly_salary;
@@ -56,6 +59,10 @@ class SalariedEmployee extends Employee {
 class HourlyEmployee extends Employee {
     private double wage;
     private double hoursWorked;
+
+    public HourlyEmployee(String firstName, String lastName, String ssid){
+        super(firstName, lastName, ssid);
+    }
 
     public double getWage() {
         return wage;
@@ -72,13 +79,15 @@ class HourlyEmployee extends Employee {
     public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
-
-
 }
 
 class CommisionEmployee extends Employee {
     private double commisionRate;
     private double grossSales;
+
+    public CommisionEmployee(String firstName, String lastName, String ssid){
+        super(firstName, lastName, ssid);
+    }
 
     public double getCommisionRate() {
         return commisionRate;
@@ -100,6 +109,10 @@ class CommisionEmployee extends Employee {
 class BaseEmployee extends Employee {
     private double baseSalary;
 
+    public BaseEmployee(String firstName, String lastName, String ssid){
+        super(firstName, lastName, ssid);
+    }
+
     public double getBaseSalary() {
         return baseSalary;
     }
@@ -107,5 +120,4 @@ class BaseEmployee extends Employee {
     public void setBaseSalary(double baseSalary) {
         this.baseSalary = baseSalary;
     }
-
 }
