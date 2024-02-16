@@ -1,9 +1,9 @@
 package Homework_1.Inheritance;
 
 public class Employee {
-    private String firstName;
-    private String lastName;
-    private String ssid;
+    protected String firstName;
+    protected String lastName;
+    protected String ssid;
 
     public Employee(){
 
