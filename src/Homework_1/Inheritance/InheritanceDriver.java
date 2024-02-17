@@ -8,6 +8,7 @@ public class InheritanceDriver {
                 "111-11-1111"
         );
         Joe.setWeeklySalary(2500);
+        Joe.printInfo();
 
         HourlyEmployee Stephanie = new HourlyEmployee(
                 "Stephanie",
@@ -16,6 +17,7 @@ public class InheritanceDriver {
         );
         Stephanie.setWage(25);
         Stephanie.setHoursWorked(32);
+        Stephanie.printInfo();
 
         HourlyEmployee Mary = new HourlyEmployee(
                 "Mary",
@@ -24,6 +26,7 @@ public class InheritanceDriver {
         );
         Mary.setWage(19);
         Mary.setHoursWorked(47);
+        Mary.printInfo();
 
         CommisionEmployee Nicole = new CommisionEmployee(
                 "Nicole",
@@ -32,6 +35,7 @@ public class InheritanceDriver {
         );
         Nicole.setCommisionRate(0.15);
         Nicole.setGrossSales(50000);
+        Nicole.printInfo();
 
         SalariedEmployee Renwa = new SalariedEmployee(
                 "Renwa",
@@ -39,6 +43,7 @@ public class InheritanceDriver {
                 "555-55-5555"
         );
         Renwa.setWeeklySalary(1700);
+        Renwa.printInfo();
 
         BaseEmployee Mike = new BaseEmployee(
                 "Mike",
@@ -46,6 +51,7 @@ public class InheritanceDriver {
                 "666-66-6666"
         );
         Mike.setBaseSalary(95000);
+        Mike.printInfo();
 
         CommisionEmployee Mahnaz = new CommisionEmployee(
                 "Mahnaz",
@@ -54,5 +60,6 @@ public class InheritanceDriver {
         );
         Mahnaz.setCommisionRate(0.22);
         Mahnaz.setGrossSales(40000);
+        Mahnaz.printInfo();
     }
 }

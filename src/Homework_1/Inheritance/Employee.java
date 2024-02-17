@@ -38,6 +38,14 @@ public class Employee {
     public void setSSID(String newSSID){
         ssid = newSSID;
     }
+
+    protected String getInfo(){
+        return String.format("First Name: %s, Last Name: %s, SSID: %s", firstName, lastName, ssid);
+    }
+
+    public void printInfo(){
+        System.out.println(getInfo());
+    }
 }
 
 class SalariedEmployee extends Employee {
@@ -53,6 +61,11 @@ class SalariedEmployee extends Employee {
 
     public void setWeeklySalary(double weekly_salary) {
         this.weekly_salary = weekly_salary;
+    }
+
+    @Override
+    protected String getInfo(){
+        return super.getInfo() + String.format(", Weekly Salary: %.2f", weekly_salary);
     }
 }
 
@@ -79,6 +92,11 @@ class HourlyEmployee extends Employee {
     public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
+
+    @Override
+    protected String getInfo(){
+        return super.getInfo() + String.format(", Wage: %.2f, Hours worked: %.2f", wage, hoursWorked);
+    }
 }
 
 class CommisionEmployee extends Employee {
@@ -104,6 +122,10 @@ class CommisionEmployee extends Employee {
     public void setGrossSales(double grossSales) {
         this.grossSales = grossSales;
     }
+
+    protected String getInfo(){
+        return super.getInfo() + String.format(", Com Rate: %.2f, Gross Salary: %.2f", commisionRate, grossSales);
+    }
 }
 
 class BaseEmployee extends Employee {
@@ -119,5 +141,9 @@ class BaseEmployee extends Employee {
 
     public void setBaseSalary(double baseSalary) {
         this.baseSalary = baseSalary;
+    }
+
+    protected String getInfo(){
+        return super.getInfo() + String.format(", Base Salary: %.2f", baseSalary);
     }
 }
