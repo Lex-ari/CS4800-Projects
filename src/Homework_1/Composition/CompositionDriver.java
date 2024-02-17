@@ -3,9 +3,11 @@ package Homework_1.Composition;
 public class CompositionDriver {
     public static void main(String[] args){
         Folder demo1 = new Folder("demo1");
-        Folder sourceFiles = demo1.addSubFolder("Source Files");
+        demo1.addSubFolder("Source Files");
+        Folder sourceFiles = demo1.getSubFolder("Source Files");
         sourceFiles.addSubFolder(".phalcon");
-        Folder app = sourceFiles.addSubFolder("app");
+        sourceFiles.addSubFolder("app");
+        Folder app = sourceFiles.getSubFolder("app");
         app.addSubFolder("config");
         app.addSubFolder("controllers");
         app.addSubFolder("library");

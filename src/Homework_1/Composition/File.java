@@ -24,5 +24,6 @@ public class File {
         for (int i = 0; i < subLevel; i++){
             tab += "| ";
         }
+        System.out.println(tab + name);
     }
 }
