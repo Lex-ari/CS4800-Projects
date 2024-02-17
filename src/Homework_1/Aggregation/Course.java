@@ -46,7 +46,7 @@ public class Course {
         String info = String.format("Instructor: ");
         for (int i = 0; i < instructors.size(); i++){
             Instructor currentInstructor = instructors.get(i);
-            info += currentInstructor.getFirstName() + " " + currentInstructor.getLastName();
+            info += currentInstructor.getFirstName() + " " + currentInstructor.getLastName() + " Office Number: " + currentInstructor.getOfficeNumber();
             if (i < instructors.size() - 1){
                 info += ", ";
             }
@@ -58,7 +58,7 @@ public class Course {
         String info = String.format("Textbook: ");
         for (int i = 0; i < textbooks.size(); i++){
             Textbook currentTextbook = textbooks.get(i);
-            info += currentTextbook.getTitle() + " by " + currentTextbook.getAuthor();
+            info += currentTextbook.getTitle() + " by " + currentTextbook.getAuthor() + ", Published by: " + currentTextbook.getPublisher();
             if (i < instructors.size() - 1){
                 info += ", ";
             }
