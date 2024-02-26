@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Employee{
+String firstName
+String lastName
+String ssid
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getSSID()
+setSSID()
+getInfo()
+printInfo()
+}
+
+class SalariedEmployee{
+double weekly_salary
+getWeeklySalary()
+setWeeklySalary()
+}
+
+class HourlyEmployee{
+double wage
+double hoursWorked
+getWage()
+setWage()
+getHoursWOrked()
+setHoursWorked()
+}
+
+class CommisionEmployee{
+double commisionRate
+double grossSales
+getCommisionRate()
+setCommisionRate()
+getGrossSales()
+setGrossSales()
+}
+
+class BaseEmployee {
+double baseSalary
+getBaseSalary()
+setBaseSalary()
+}
+
+Employee <|-- SalariedEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- CommisionEmployee
+Employee <|-- BaseEmployee
+@enduml
