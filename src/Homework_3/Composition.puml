@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Folder{
+String name
+ArrayList<File> subFiles
+ArrayList<Folder> subFolders
+
+getName()
+setName()
+addSubFolder()
+addSubFile()
+getSubFolder()
+getSubFile()
+removeSubFolder()
+removeSubFile()
+printDirectory()
+}
+
+class File{
+String name
+getName()
+setName()
+printNameInSubLevel()
+}
+
+Folder *-- File
+@enduml
