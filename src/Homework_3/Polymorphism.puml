@@ -15,12 +15,14 @@ class Cruiseship{
 int maxPassengers
 getMaxPassengers()
 setMaxPassengers()
+printInfo()
 }
 
 class Cargoship{
 int tonnage
 getTonnage()
 setTonnage()
+printInfo()
 }
 Ship <|-- Cruiseship
 Ship <|-- Cargoship

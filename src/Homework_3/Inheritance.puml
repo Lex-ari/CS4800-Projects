@@ -19,6 +19,7 @@ class SalariedEmployee{
 double weekly_salary
 getWeeklySalary()
 setWeeklySalary()
+getInfo()
 }
 
 class HourlyEmployee{
@@ -26,8 +27,9 @@ double wage
 double hoursWorked
 getWage()
 setWage()
-getHoursWOrked()
+getHoursWorked()
 setHoursWorked()
+getInfo()
 }
 
 class CommisionEmployee{
@@ -37,12 +39,14 @@ getCommisionRate()
 setCommisionRate()
 getGrossSales()
 setGrossSales()
+getInfo()
 }
 
 class BaseEmployee {
 double baseSalary
 getBaseSalary()
 setBaseSalary()
+getInfo()
 }
 
 Employee <|-- SalariedEmployee
