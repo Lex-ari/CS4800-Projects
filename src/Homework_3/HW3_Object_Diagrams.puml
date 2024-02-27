@@ -27,8 +27,8 @@ yearBuilt = 2015
 
 map "<u>fleet:Ship[3]</u>" as fleet{
 [0] *--> taroumaru
-[1] *--> disney
-[2] *--> evergreen
+[1] *--> disneyShip
+[2] *--> evergreenShip
 }
 disney --|> disneyShip
 evergreen --|> evergreenShip

@@ -1,9 +1,9 @@
 @startuml
 
 class Course {
-String name
-ArrayList<Instructor> instructors
-ArrayList<Textbook> textbooks
+name: String
+instructors: Instructor[*]
+textbooks: Textbook[*]
 getName()
 setName()
 getInstructors()
@@ -14,9 +14,9 @@ printCourseInfo()
 }
 
 class Instructor{
-String firstName
-String lastName
-String officeNumber
+firstName: String
+lastName: String
+officeNumber: String
 getFirstName()
 setFirstName()
 getLastName()
@@ -26,9 +26,9 @@ setOfficeNumber()
 }
 
 class Textbook{
-String title
-String author
-String publisher
+title: String
+author: String
+publisher: String
 getTitle()
 setTitle()
 getAuthor()
@@ -41,9 +41,9 @@ Course o-- Instructor
 Course o-- Textbook
 
 class Folder{
-String name
-ArrayList<File> subFiles
-ArrayList<Folder> subFolders
+name: String
+subFiles: File[*]
+subFolders: Folder[*]
 
 getName()
 setName()
@@ -57,18 +57,19 @@ printDirectory()
 }
 
 class File{
-String name
+name: String
 getName()
 setName()
 printNameInSubLevel()
 }
 
 Folder *-- File
+Folder *-- Folder
 
 class Employee{
-String firstName
-String lastName
-String ssid
+firstName: String
+lastName: String
+ssid: String
 getFirstName()
 setFirstName()
 getLastName()
@@ -80,15 +81,15 @@ printInfo()
 }
 
 class SalariedEmployee{
-double weekly_salary
+weekly_salary: double
 getWeeklySalary()
 setWeeklySalary()
 getInfo()
 }
 
 class HourlyEmployee{
-double wage
-double hoursWorked
+wage: double
+hoursWorked: double
 getWage()
 setWage()
 getHoursWorked()
@@ -97,8 +98,8 @@ getInfo()
 }
 
 class CommisionEmployee{
-double commisionRate
-double grossSales
+commisionRate: double
+grossSales: double
 getCommisionRate()
 setCommisionRate()
 getGrossSales()
@@ -107,7 +108,7 @@ getInfo()
 }
 
 class BaseEmployee {
-double baseSalary
+baseSalary: double
 getBaseSalary()
 setBaseSalary()
 getInfo()
@@ -119,8 +120,8 @@ Employee <|-- CommisionEmployee
 Employee <|-- BaseEmployee
 
 class Ship {
-String name
-String yearBuilt
+name: String
+yearBuilt: String
 getName()
 setName()
 getYearBuilt()
@@ -129,14 +130,14 @@ printInfo()
 }
 
 class Cruiseship{
-int maxPassengers
+maxPassengers: int
 getMaxPassengers()
 setMaxPassengers()
 printInfo()
 }
 
 class Cargoship{
-int tonnage
+tonnage: int
 getTonnage()
 setTonnage()
 printInfo()
