@@ -1,0 +1,147 @@
+@startuml
+
+class Course {
+String name
+ArrayList<Instructor> instructors
+ArrayList<Textbook> textbooks
+getName()
+setName()
+getInstructors()
+addInstructor()
+getTextbooks()
+addTextbook()
+printCourseInfo()
+}
+
+class Instructor{
+String firstName
+String lastName
+String officeNumber
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getOfficeNumber()
+setOfficeNumber()
+}
+
+class Textbook{
+String title
+String author
+String publisher
+getTitle()
+setTitle()
+getAuthor()
+setAuthor()
+getPublisher()
+setPublisher()
+}
+
+Course o-- Instructor
+Course o-- Textbook
+
+class Folder{
+String name
+ArrayList<File> subFiles
+ArrayList<Folder> subFolders
+
+getName()
+setName()
+addSubFolder()
+addSubFile()
+getSubFolder()
+getSubFile()
+removeSubFolder()
+removeSubFile()
+printDirectory()
+}
+
+class File{
+String name
+getName()
+setName()
+printNameInSubLevel()
+}
+
+Folder *-- File
+
+class Employee{
+String firstName
+String lastName
+String ssid
+getFirstName()
+setFirstName()
+getLastName()
+setLastName()
+getSSID()
+setSSID()
+getInfo()
+printInfo()
+}
+
+class SalariedEmployee{
+double weekly_salary
+getWeeklySalary()
+setWeeklySalary()
+getInfo()
+}
+
+class HourlyEmployee{
+double wage
+double hoursWorked
+getWage()
+setWage()
+getHoursWorked()
+setHoursWorked()
+getInfo()
+}
+
+class CommisionEmployee{
+double commisionRate
+double grossSales
+getCommisionRate()
+setCommisionRate()
+getGrossSales()
+setGrossSales()
+getInfo()
+}
+
+class BaseEmployee {
+double baseSalary
+getBaseSalary()
+setBaseSalary()
+getInfo()
+}
+
+Employee <|-- SalariedEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- CommisionEmployee
+Employee <|-- BaseEmployee
+
+class Ship {
+String name
+String yearBuilt
+getName()
+setName()
+getYearBuilt()
+setYearBuilt()
+printInfo()
+}
+
+class Cruiseship{
+int maxPassengers
+getMaxPassengers()
+setMaxPassengers()
+printInfo()
+}
+
+class Cargoship{
+int tonnage
+getTonnage()
+setTonnage()
+printInfo()
+}
+Ship <|-- Cruiseship
+Ship <|-- Cargoship
+
+@enduml

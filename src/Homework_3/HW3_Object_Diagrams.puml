@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "<u>boat:Ship</u>" as taroumaru{
+name = Taroumaru
+yearBuilt: 1985
+}
+
+object "<u>disney:CruiseShip</u>" as disney{
+name = Disney Treasure
+yearBuilt = 2023
+maxPassengers = 2023
+}
+
+object "<u>evergreen:CargoShip</u>" as evergreen{
+name = Ever Given
+yearBuilt = 2015
+tonnage = 220940
+}
+
+map "<u>fleet:Ship[3]</u>" as fleet{
+[0] *--> taroumaru
+[1] *--> disney
+[2] *--> evergreen
+}
+
+object "<u>softwareEngineeringCourse:Course</u>" as softwareEngineeringCourse{
+name = Software Engineering
+}
+
+object "<u>nima:Instructor</u>" as nima{
+firstName = Nima
+lastName = Davarpanah
+officeNumber = 3-2636
+}
+
+object "<u>cleanCode:Textbook</u>" as cleanCode{
+title = Clean Code
+author = Robert C. Martin
+publisher = Prentice Hall
+}
+
+softwareEngineeringCourse o-- nima
+softwareEngineeringCourse o-- cleanCode
+@enduml
