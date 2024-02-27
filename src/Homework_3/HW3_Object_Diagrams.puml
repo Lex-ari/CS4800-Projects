@@ -7,22 +7,31 @@ yearBuilt: 1985
 }
 
 object "<u>disney:CruiseShip</u>" as disney{
-name = Disney Treasure
-yearBuilt = 2023
 maxPassengers = 2023
 }
 
+object "<u>disney:Ship</u>" as disneyShip{
+name = Disney Treasure
+yearBuilt = 2023
+}
+
 object "<u>evergreen:CargoShip</u>" as evergreen{
-name = Ever Given
-yearBuilt = 2015
 tonnage = 220940
 }
+
+object "<u>evergreen:Ship</u>" as evergreenShip{
+name = Ever Given
+yearBuilt = 2015
+}
+
 
 map "<u>fleet:Ship[3]</u>" as fleet{
 [0] *--> taroumaru
 [1] *--> disney
 [2] *--> evergreen
 }
+disney --|> disneyShip
+evergreen --|> evergreenShip
 
 object "<u>softwareEngineeringCourse:Course</u>" as softwareEngineeringCourse{
 name = Software Engineering
@@ -42,4 +51,46 @@ publisher = Prentice Hall
 
 softwareEngineeringCourse o-- nima
 softwareEngineeringCourse o-- cleanCode
+
+object "<u>demo1:Folder</u>" as demo1{
+name = demo1
+}
+object "<u>sourceFiles:Folder</u>" as sourceFiles{
+name = Source Files
+}
+object "<u>.phalcon:File</u>" as .phalcon{
+name = .phalcon
+}
+object "<u>cache:Folder</u>" as cache{
+name = cache
+}
+object "<u>public:Folder</u>" as public{
+name = public
+}
+object "<u>.htaccess:File</u>" as .htaccess{
+name = .htaccess
+}
+object "<u>.htrouter.php:File</u>" as htrouterphp{
+name = .htrouter.php
+}
+object "<u>index.html:File</u>" as indexhtml{
+name = index.html
+}
+object "<u>Include Path:Folder</u>" as includePath{
+name = Include Path
+}
+object "<u>Remote Files:Folder</u>" as remoteFiles{
+name = Remote Files
+}
+demo1 *-- sourceFiles
+sourceFiles *-- .phalcon
+sourceFiles *-- cache
+sourceFiles *-- public
+sourceFiles *-- .htaccess
+sourceFiles *-- htrouterphp
+sourceFiles *-- indexhtml
+demo1 *-- includePath
+demo1 *-- remoteFiles
+
+
 @enduml
