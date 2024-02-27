@@ -2,8 +2,8 @@
 'https://plantuml.com/object-diagram
 
 object "<u>boat:Ship</u>" as taroumaru{
-name = Taroumaru
-yearBuilt: 1985
+name = "Taroumaru"
+yearBuilt = 1985
 }
 
 object "<u>disney:CruiseShip</u>" as disney{
@@ -11,7 +11,7 @@ maxPassengers = 2023
 }
 
 object "<u>disney:Ship</u>" as disneyShip{
-name = Disney Treasure
+name = "Disney Treasure"
 yearBuilt = 2023
 }
 
@@ -20,67 +20,67 @@ tonnage = 220940
 }
 
 object "<u>evergreen:Ship</u>" as evergreenShip{
-name = Ever Given
+name = "Ever Given"
 yearBuilt = 2015
 }
 
 
-map "<u>fleet:Ship[3]</u>" as fleet{
-[0] *--> taroumaru
-[1] *--> disneyShip
-[2] *--> evergreenShip
+object "<u>fleet:Ship[3]</u>" as fleet{
 }
+fleet o-- disneyShip
+fleet o-- taroumaru
+fleet o-- evergreenShip
 disney --|> disneyShip
 evergreen --|> evergreenShip
 
 object "<u>softwareEngineeringCourse:Course</u>" as softwareEngineeringCourse{
-name = Software Engineering
+name = "Software Engineering"
 }
 
 object "<u>nima:Instructor</u>" as nima{
-firstName = Nima
-lastName = Davarpanah
-officeNumber = 3-2636
+firstName = "Nima"
+lastName = "Davarpanah"
+officeNumber = "3-2636"
 }
 
 object "<u>cleanCode:Textbook</u>" as cleanCode{
-title = Clean Code
-author = Robert C. Martin
-publisher = Prentice Hall
+title = "Clean Code"
+author = "Robert C. Martin"
+publisher = "Prentice Hall"
 }
 
 softwareEngineeringCourse o-- nima
 softwareEngineeringCourse o-- cleanCode
 
 object "<u>demo1:Folder</u>" as demo1{
-name = demo1
+name = "demo1"
 }
 object "<u>sourceFiles:Folder</u>" as sourceFiles{
-name = Source Files
+name = "Source Files"
 }
 object "<u>.phalcon:File</u>" as .phalcon{
-name = .phalcon
+name = ".phalcon"
 }
 object "<u>cache:Folder</u>" as cache{
-name = cache
+name = "cache"
 }
 object "<u>public:Folder</u>" as public{
-name = public
+name = "public"
 }
 object "<u>.htaccess:File</u>" as .htaccess{
-name = .htaccess
+name = ".htaccess"
 }
 object "<u>.htrouter.php:File</u>" as htrouterphp{
-name = .htrouter.php
+name = ".htrouter.php"
 }
 object "<u>index.html:File</u>" as indexhtml{
-name = index.html
+name = "index.html"
 }
 object "<u>Include Path:Folder</u>" as includePath{
-name = Include Path
+name = "Include Path"
 }
 object "<u>Remote Files:Folder</u>" as remoteFiles{
-name = Remote Files
+name = "Remote Files"
 }
 demo1 *-- sourceFiles
 sourceFiles *-- .phalcon
