@@ -1,6 +1,6 @@
 package Homework_4.Macronutrient;
 
-public class CarbsFactory {
+public class CarbsFactory extends MacronutrientFactory {
     public static Carbs getCarb(CarbOptions type){
         switch (type){
             case Cheese -> {

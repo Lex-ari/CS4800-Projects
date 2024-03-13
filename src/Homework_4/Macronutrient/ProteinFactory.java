@@ -1,6 +1,6 @@
 package Homework_4.Macronutrient;
 
-public class ProteinFactory {
+public class ProteinFactory extends MacronutrientFactory{
     public static Protein getProtein(ProteinOptions type){
         switch (type){
             case Fish -> {

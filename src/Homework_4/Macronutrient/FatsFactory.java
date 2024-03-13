@@ -1,6 +1,6 @@
 package Homework_4.Macronutrient;
 
-public class FatsFactory {
+public class FatsFactory extends MacronutrientFactory{
     public static Fats getFat(FatOptions type){
         switch (type){
             case Avocado -> {
