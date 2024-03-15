@@ -44,7 +44,7 @@ public abstract class DietData {
             "Peanuts",
     };
 
-    protected List removeListAfromListB(List A, List B) {
+    protected static List removeListAfromListB(List A, List B) {
         List returnCopy = new ArrayList(List.copyOf(A));
         for (Object object : B) {
             returnCopy.remove(object);
