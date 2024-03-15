@@ -1,15 +1,15 @@
 package Homework_4.Macronutrient;
 
 public class MacronutrientFactoryCreator {
-    public static MacronutrientFactory createFactory(MacronutrientTypes type){
+    public static MacronutrientFactory createFactory(String type){
         switch (type) {
-            case Carbs -> {
+            case "Carbs" -> {
                 return new CarbsFactory();
             }
-            case Fats -> {
+            case "Fats" -> {
                 return new FatsFactory();
             }
-            case Protein -> {
+            case "Protein" -> {
                 return new ProteinFactory();
             }
             default -> {

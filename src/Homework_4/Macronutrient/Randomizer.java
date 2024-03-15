@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Randomizer {
 
-    public static Enum getRandomEnum(List<Enum> enums){
-        int length = enums.size();
+    public static String getRandomStringFromList(List<String> list){
+        int length = list.size();
         int randomIndex = (int)(Math.random() * length);
-        return enums.get(randomIndex);
+        return list.get(randomIndex);
     }
 }

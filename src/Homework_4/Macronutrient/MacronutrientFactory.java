@@ -1,28 +1,22 @@
 package Homework_4.Macronutrient;
 
 public abstract class MacronutrientFactory {
-
-}
-
-enum MacronutrientTypes {
-    Carbs,
-    Fats,
-    Protein,
+    abstract Macronutrient getMacroNutrient(String type);
 }
 
 class CarbsFactory extends MacronutrientFactory {
-    public static Carbs getCarb(CarbOptions type){
+    public Carbs getMacroNutrient(String type){
         switch (type){
-            case Cheese -> {
+            case "Cheese" -> {
                 return new Cheese();
             }
-            case Bread -> {
+            case "Bread" -> {
                 return new Bread();
             }
-            case Lentils -> {
+            case "Lentils" -> {
                 return new Lentils();
             }
-            case Pistachio -> {
+            case "Pistachio" -> {
                 return new Pistachio();
             }
             default -> {
@@ -33,18 +27,18 @@ class CarbsFactory extends MacronutrientFactory {
 }
 
 class FatsFactory extends MacronutrientFactory{
-    public static Fats getFat(FatOptions type){
+    public Fats getMacroNutrient(String type){
         switch (type){
-            case Avocado -> {
+            case "Avocado" -> {
                 return new Avocado();
             }
-            case Sour_Cream -> {
+            case "Sour_Cream" -> {
                 return new Sour_Cream();
             }
-            case Tuna -> {
+            case "Tuna" -> {
                 return new Tuna();
             }
-            case Peanuts -> {
+            case "Peanuts" -> {
                 return new Peanuts();
             }
             default -> {
@@ -55,18 +49,18 @@ class FatsFactory extends MacronutrientFactory{
 }
 
 class ProteinFactory extends MacronutrientFactory{
-    public static Protein getProtein(ProteinOptions type){
+    public Protein getMacroNutrient(String type){
         switch (type){
-            case Fish -> {
+            case "Fish" -> {
                 return new Fish();
             }
-            case Chicken -> {
+            case "Chicken" -> {
                 return new Chicken();
             }
-            case Beef -> {
+            case "Beef" -> {
                 return new Beef();
             }
-            case Tofu -> {
+            case "Tofu" -> {
                 return new Tofu();
             }
             default -> {

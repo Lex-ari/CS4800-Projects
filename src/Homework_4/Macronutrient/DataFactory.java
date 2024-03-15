@@ -2,15 +2,15 @@ package Homework_4.Macronutrient;
 
 public class DataFactory {
 
-    public static DietData getDietData(MacronutrientTypes type){
+    public static DietData getDietData(String type){
         switch (type) {
-            case Carbs -> {
+            case "Carbs" -> {
                 return new CarbData();
             }
-            case Fats -> {
+            case "Fats" -> {
                 return new FatsData();
             }
-            case Protein -> {
+            case "Protein" -> {
                 return new ProteinData();
             }
             default -> {

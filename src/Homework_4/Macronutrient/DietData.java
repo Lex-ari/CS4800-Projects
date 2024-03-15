@@ -1,61 +1,75 @@
 package Homework_4.Macronutrient;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-enum DietOptions {
-    No_Restriction,
-    Paleo,
-    Vegan,
-    Nut_Allergy,
-}
-
 public abstract class DietData {
-    protected static Enum[] noRestrictionBan = {};
-    protected static Enum[] paleoBan = {
-            CarbOptions.Cheese,
-            CarbOptions.Bread,
-            CarbOptions.Lentils,
-            ProteinOptions.Tofu,
-            FatOptions.Sour_Cream,
+    public static String[] carbList = {
+            "Cheese",
+            "Bread",
+            "Lentils",
+            "Pistachio",
     };
-    protected static Enum[] veganBan = {
-            ProteinOptions.Fish,
-            ProteinOptions.Chicken,
-            ProteinOptions.Beef,
-            CarbOptions.Cheese,
-            FatOptions.Sour_Cream,
+    public static String[] fatList = {
+            "Avocado",
+            "Sour_Cream",
+            "Tuna",
+            "Peanuts",
     };
-    protected static Enum[] nutBan = {
-            FatOptions.Peanuts,
+    public static String[] proteinList = {
+            "Fish",
+            "Chicken",
+            "Beef",
+            "Tofu",
+    };
+
+
+    protected static String[] noRestrictionBan = {};
+    protected static String[] paleoBan = {
+            "Cheese",
+            "Bread",
+            "Lentils",
+            "Tofu",
+            "Sour_Cream",
+    };
+    protected static String[] veganBan = {
+            "Fish",
+            "Chicken",
+            "Beef",
+            "Cheese",
+            "Sour_Cream",
+    };
+    protected static String[] nutBan = {
+            "Peanuts",
     };
 
     protected List removeListAfromListB(List A, List B) {
-        List returnCopy = List.copyOf(A);
-        for (Object object : A) {
+        List returnCopy = new ArrayList(List.copyOf(A));
+        for (Object object : B) {
             returnCopy.remove(object);
         }
         return returnCopy;
     }
 
-    abstract List getSafeMacronutrients(DietOptions options);
+    abstract List getSafeMacronutrients(String options);
 }
 
 class CarbData extends DietData {
     @Override
-    public List getSafeMacronutrients(DietOptions option){
-        List macronutrientOptions = Arrays.asList(CarbOptions.values());
+    public List getSafeMacronutrients(String option){
+        List macronutrientOptions = Arrays.asList(carbList);
         switch (option){
-            case No_Restriction -> {
+            case "No Restrictions" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(noRestrictionBan));
             }
-            case Paleo -> {
+            case "Paleo" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(paleoBan));
             }
-            case Vegan -> {
+            case "Vegan" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(veganBan));
             }
-            case Nut_Allergy -> {
+            case "Nut Allergy" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(nutBan));
             }
             default -> {
@@ -67,19 +81,19 @@ class CarbData extends DietData {
 
 class FatsData extends DietData {
     @Override
-    public List getSafeMacronutrients(DietOptions option){
-        List macronutrientOptions = Arrays.asList(FatOptions.values());
+    public List getSafeMacronutrients(String option){
+        List macronutrientOptions = Arrays.asList(fatList);
         switch (option){
-            case No_Restriction -> {
+            case "No Restrictions" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(noRestrictionBan));
             }
-            case Paleo -> {
+            case "Paleo" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(paleoBan));
             }
-            case Vegan -> {
+            case "Vegan" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(veganBan));
             }
-            case Nut_Allergy -> {
+            case "Nut Allergy" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(nutBan));
             }
             default -> {
@@ -91,19 +105,19 @@ class FatsData extends DietData {
 
 class ProteinData extends DietData {
     @Override
-    public List getSafeMacronutrients(DietOptions option){
-        List macronutrientOptions = Arrays.asList(ProteinOptions.values());
+    public List getSafeMacronutrients(String option){
+        List macronutrientOptions = Arrays.asList(proteinList);
         switch (option){
-            case No_Restriction -> {
+            case "No Restrictions" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(noRestrictionBan));
             }
-            case Paleo -> {
+            case "Paleo" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(paleoBan));
             }
-            case Vegan -> {
+            case "Vegan" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(veganBan));
             }
-            case Nut_Allergy -> {
+            case "Nut Allergy" -> {
                 return removeListAfromListB(macronutrientOptions, Arrays.asList(nutBan));
             }
             default -> {

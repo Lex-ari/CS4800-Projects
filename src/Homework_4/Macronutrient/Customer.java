@@ -2,9 +2,9 @@ package Homework_4.Macronutrient;
 
 public class Customer {
     private String name;
-    private DietOptions dietPlan;
+    private String dietPlan;
 
-    public Customer(String name, DietOptions dietPlan){
+    public Customer(String name, String dietPlan){
         this.name = name;
         this.dietPlan = dietPlan;
     }
@@ -17,11 +17,11 @@ public class Customer {
         this.name = name;
     }
 
-    public DietOptions getDietPlan() {
+    public String getDietPlan() {
         return dietPlan;
     }
 
-    public void setDietPlan(DietOptions dietPlan) {
+    public void setDietPlan(String dietPlan) {
         this.dietPlan = dietPlan;
     }
 }

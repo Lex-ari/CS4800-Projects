@@ -1,15 +1,9 @@
 package Homework_4.Macronutrient;
 
-public abstract class Carbs {
+public abstract class Carbs extends Macronutrient{
     abstract String getDescription();
 }
 
-enum CarbOptions {
-    Cheese,
-    Bread,
-    Lentils,
-    Pistachio,
-}
 
 class Cheese extends Carbs {
     @Override

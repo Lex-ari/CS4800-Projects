@@ -1,14 +1,7 @@
 package Homework_4.Macronutrient;
 
-public abstract class Protein {
+public abstract class Protein extends Macronutrient{
     abstract String getDescription();
-}
-
-enum ProteinOptions {
-    Fish,
-    Chicken,
-    Beef,
-    Tofu,
 }
 
 class Fish extends Protein {

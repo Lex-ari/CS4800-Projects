@@ -1,15 +1,10 @@
 package Homework_4.Macronutrient;
 
-public abstract class Fats {
+public abstract class Fats extends Macronutrient{
     abstract String getDescription();
 }
 
-enum FatOptions {
-    Avocado,
-    Sour_Cream,
-    Tuna,
-    Peanuts,
-}
+
 
 class Avocado extends Fats {
     @Override
