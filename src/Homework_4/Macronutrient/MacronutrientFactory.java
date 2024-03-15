@@ -5,6 +5,16 @@ public abstract class MacronutrientFactory {
 }
 
 class CarbsFactory extends MacronutrientFactory {
+    private static CarbsFactory carbsFactoryInstance = null;
+    private CarbsFactory(){
+
+    }
+    public static CarbsFactory getInstance(){
+        if (carbsFactoryInstance == null) {
+            carbsFactoryInstance = new CarbsFactory();
+        }
+        return carbsFactoryInstance;
+    }
     public Carbs getMacroNutrient(String type){
         switch (type){
             case "Cheese" -> {
@@ -27,12 +37,22 @@ class CarbsFactory extends MacronutrientFactory {
 }
 
 class FatsFactory extends MacronutrientFactory{
+    private static FatsFactory fatsFactoryInstance = null;
+    private FatsFactory(){
+
+    }
+    public static FatsFactory getInstance(){
+        if (fatsFactoryInstance == null) {
+            fatsFactoryInstance = new FatsFactory();
+        }
+        return fatsFactoryInstance;
+    }
     public Fats getMacroNutrient(String type){
         switch (type){
             case "Avocado" -> {
                 return new Avocado();
             }
-            case "Sour_Cream" -> {
+            case "Sour Cream" -> {
                 return new Sour_Cream();
             }
             case "Tuna" -> {
@@ -49,6 +69,16 @@ class FatsFactory extends MacronutrientFactory{
 }
 
 class ProteinFactory extends MacronutrientFactory{
+    private static ProteinFactory proteinFactoryInstance = null;
+    private ProteinFactory(){
+
+    }
+    public static ProteinFactory getInstance(){
+        if (proteinFactoryInstance == null) {
+            proteinFactoryInstance = new ProteinFactory();
+        }
+        return proteinFactoryInstance;
+    }
     public Protein getMacroNutrient(String type){
         switch (type){
             case "Fish" -> {

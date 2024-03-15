@@ -13,7 +13,7 @@ public abstract class DietData {
     };
     public static String[] fatList = {
             "Avocado",
-            "Sour_Cream",
+            "Sour Cream",
             "Tuna",
             "Peanuts",
     };
@@ -31,17 +31,18 @@ public abstract class DietData {
             "Bread",
             "Lentils",
             "Tofu",
-            "Sour_Cream",
+            "Sour Cream",
     };
     protected static String[] veganBan = {
             "Fish",
             "Chicken",
             "Beef",
             "Cheese",
-            "Sour_Cream",
+            "Sour Cream",
     };
     protected static String[] nutBan = {
             "Peanuts",
+            "Pistachio",
     };
 
     protected static List removeListAfromListB(List A, List B) {

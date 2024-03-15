@@ -16,7 +16,7 @@ class Avocado extends Fats {
 class Sour_Cream extends Fats {
     @Override
     public String getDescription(){
-        return "Sour_Cream";
+        return "Sour Cream";
     }
 }
 
