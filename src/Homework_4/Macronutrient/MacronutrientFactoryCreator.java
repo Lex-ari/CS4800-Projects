@@ -1,8 +1,7 @@
 package Homework_4.Macronutrient;
 
 public class MacronutrientFactoryCreator {
-
-    public static MacronutrientFactory createFactory(MacronutrientFactory.MacronutrientTypes type){
+    public static MacronutrientFactory createFactory(MacronutrientTypes type){
         switch (type) {
             case Carbs -> {
                 return new CarbsFactory();
