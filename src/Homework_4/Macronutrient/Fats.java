@@ -12,24 +12,28 @@ enum FatOptions {
 }
 
 class Avocado extends Fats {
+    @Override
     public String getDescription(){
         return "Avocado";
     }
 }
 
 class Sour_Cream extends Fats {
+    @Override
     public String getDescription(){
         return "Sour_Cream";
     }
 }
 
 class Tuna extends Fats {
+    @Override
     public String getDescription(){
         return "Tuna";
     }
 }
 
 class Peanuts extends Fats {
+    @Override
     public String getDescription(){
         return "Peanuts";
     }
